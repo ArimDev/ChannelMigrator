@@ -1,6 +1,6 @@
 {
   "name": "channelmigrator",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Discord bot intended for migrating channels with messages to other servers.",
   "main": "index.js",
   "type": "module",
@@ -23,14 +23,17 @@
     "transfer messages"
   ],
   "author": "PetyXbron",
-  "license": "CC BY-NC-ND 4.0",
+  "license": "CC BY-SA 4.0",
   "bugs": {
     "url": "https://github.com/ArimDev/ChannelMigrator/issues"
   },
   "homepage": "https://github.com/ArimDev/ChannelMigrator#readme",
+  "engines": {
+    "node": ">=16.9.0"
+  },
   "dependencies": {
     "ascii-table": "^0.0.9",
-    "discord.js": "^14.16.3",
+    "discord.js": "^14.17.2",
     "dotenv": "^16.4.7"
   }
 }

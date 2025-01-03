@@ -12,8 +12,9 @@ Discord bot intended for migrating channels with messages to other servers.
 
 **ChannelMigrator** is licensed under the [**CC BY-SA 4.0 license**](https://creativecommons.org/licenses/by-sa/4.0/)
 
-[![Creative Commons License](https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
 
-© 2024 **ChannelMigrator** - made by **PetyXbron** under **ArimDev**
+© 2024 - 2025 **ChannelMigrator**  
+made by **PetyXbron** under **ArimDev**
 
 </div>

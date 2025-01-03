@@ -24,7 +24,9 @@ export default async function run(bot, i) {
     if (!res.ok) i.reply({ content: `🛑 Unexpected error! Sorry...`, ephemeral: true });
 
     const start = process.hrtime();
-    const messagesJson = JSON.parse(await res.text());
+    const messagesJson = JSON.parse(await res.text())
+        .filter(msg => !!msg.content || msg.attachments.length)
+        .sort((a, b) => a.timestamp - b.timestamp);
 
     await i.reply({ content: "🔁 **Importing messages...**", ephemeral: true });
 
@@ -38,12 +40,14 @@ export default async function run(bot, i) {
         });
 
     for (const { author, content, attachments } of messagesJson) {
-        await webhook.send({
-            content: content,
-            files: attachments,
-            username: author.displayName,
-            avatarURL: author.avatar
-        });
+        try {
+            await webhook.send({
+                content: content,
+                files: attachments,
+                username: author.displayName,
+                avatarURL: author.avatar
+            });
+        } catch (e) { console.error(e); }
     }
 
     const end = process.hrtime(start);
