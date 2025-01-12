@@ -1,0 +1,16 @@
+services:
+  ChannelMigrator:
+    image: channelmigrator
+    build: .
+    container_name: ChannelMigrator
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - .:/bot
+    networks:
+      - Cordos
+
+networks:
+  Cordos:
+    external: true
